@@ -9,6 +9,11 @@ var randomfunct = {
 };
 
 // Write password to the #password input
+function passwordLength() {
+  if ((passwordLength > 7) && (passwordLength < 129)) 
+    console.log(passwordLength);
+}
+
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }console.log(getRandomLower());
