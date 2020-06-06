@@ -27,41 +27,36 @@ var passwordUpper = confirm ("Do you want to include uppercase letters?");
 
 /*var passwordNumber = confirm ("Do you want to include numbers?");
   if (getRandomNumber === false) {
-    number = 
+    number =
   }
 
 var passwordSymbol = confirm ("Do you want to include symbols?");
-  if (getRandomSymbol ===false) {
-    symbol = 
+  if (getRandomSymbol === false) {
+    symbol = symbol
   }*/
 
 // Write password to the #password input
-function passwordLength() {
+function passwordLength() {}
   if ((passwordLength > 7) && (passwordLength < 129)) 
-    console.log(passwordLength);
-}
 
 function getRandomLower() {
   return lower [Math.floor(Math.random() * lower.length)];
 }console.log(getRandomLower());
 
 function getRandomUpper() {
-  
   return upper [Math.floor(Math.random() * upper.length)];
 }console.log(getRandomUpper());
 
 function getRandomNumber() {
-  
   return numbers [Math.floor(Math.random() * numbers.length)];
 }console.log(getRandomNumber());
 
 function getRandomSymbol() {
-  
   return symbols [Math.floor(Math.random() * symbols.length)];
 }console.log(getRandomSymbol());
 
 
-function writePassword(lower, upper, number, symbol) {
+function writePassword() {
   var password = generatePassword();
 }
 
