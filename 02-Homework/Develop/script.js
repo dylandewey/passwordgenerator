@@ -6,6 +6,8 @@ var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numbers = "0123456789"
 var symbols = "!@#$%^&*(){}[]=<>/,."
 
+var random = [lower, upper, numbers, symbols];
+
 
  var passwordLength = prompt ("How many characters are desired? (8-128)");
   if ((passwordLength > 7) && (passwordLength < 129)) {
@@ -25,36 +27,36 @@ var passwordUpper = confirm ("Do you want to include uppercase letters?");
     upper = upper.toLowerCase();
   }
 
-/*var passwordNumber = confirm ("Do you want to include numbers?");
-  if (getRandomNumber === false) {
-    number =
-  }
+var passwordNumber = confirm ("Do you want to include numbers?");
+  if (getRandomNumber === false) 
+  
 
 var passwordSymbol = confirm ("Do you want to include symbols?");
-  if (getRandomSymbol === false) {
-    symbol = symbol
-  }*/
+  if (getRandomSymbol === false) 
 
 // Write password to the #password input
 function passwordLength() {}
-  if ((passwordLength > 7) && (passwordLength < 129)) 
+  if ((passwordLength > 7) && (passwordLength < 129))   
 
-function getRandomLower() {
-  return lower [Math.floor(Math.random() * lower.length)];
-}console.log(getRandomLower());
+for (var i = 0; i < random.length; i++)  {
+  function getRandomLower() {
+    return lower [Math.floor(Math.random() * lower.length)];
+  }console.log(getRandomLower());
 
-function getRandomUpper() {
-  return upper [Math.floor(Math.random() * upper.length)];
-}console.log(getRandomUpper());
+  function getRandomUpper() {
+    return upper [Math.floor(Math.random() * upper.length)];
+  }console.log(getRandomUpper());
 
-function getRandomNumber() {
-  return numbers [Math.floor(Math.random() * numbers.length)];
-}console.log(getRandomNumber());
+  function getRandomNumber() {
+    return numbers [Math.floor(Math.random() * numbers.length)];
+  }console.log(getRandomNumber());
 
-function getRandomSymbol() {
-  return symbols [Math.floor(Math.random() * symbols.length)];
-}console.log(getRandomSymbol());
+  function getRandomSymbol() {
+    return symbols [Math.floor(Math.random() * symbols.length)];
+  }console.log(getRandomSymbol());
 
+  
+  }
 
 function writePassword() {
   var password = generatePassword();
