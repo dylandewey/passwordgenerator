@@ -35,10 +35,10 @@ var passwordSymbol = confirm ("Do you want to include symbols?");
   if (getRandomSymbol === false) 
 
 // Write password to the #password input
-function passwordLength() {}
+function passwordLength() {random}
   if ((passwordLength > 7) && (passwordLength < 129))   
 
-for (var i = 0; i < random.length; i++)  {
+
   function getRandomLower() {
     return lower [Math.floor(Math.random() * lower.length)];
   }console.log(getRandomLower());
@@ -55,8 +55,18 @@ for (var i = 0; i < random.length; i++)  {
     return symbols [Math.floor(Math.random() * symbols.length)];
   }console.log(getRandomSymbol());
 
-  
+  var funcrandom = (getRandomUpper, getRandomLower, getRandomSymbol, getRandomNumber)
+
+  for (var i = 0; i<0; i++) {
+    passwordLength += random.charAt(Math.floor(Math.random() * random.length))
   }
+
+  function generatePassword() {
+    return funcrandom
+  }
+   
+  
+  
 
 function writePassword() {
   var password = generatePassword();
