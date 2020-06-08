@@ -3,20 +3,21 @@ var generateBtn = document.querySelector("#generate");
 
 var lower = "abcdefghijklmnopqrstuvwxyz"
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var numbers = "0123456789"
-var symbols = "!@#$%^&*(){}[]=<>/,."
+var number = "0123456789"
+var symbol = "!@#$%^&*(){}[]=<>/,."
 
-var random = [lower, upper, numbers, symbols];
+var random = [lower, upper, number, symbol];
 
 
  var passwordLength = prompt ("How many characters are desired? (8-128)");
-  if ((passwordLength > 7) && (passwordLength < 129)) {
-    console.log(passwordLength);
-  }
-    else {alert ("Password must be between 8 - 128 characters")
-      console.log(passwordLength);
-  }
+  
+ // Loop if answer is outside the parameters 
+ while(passwordLength <= 7 || passwordLength >= 129) {
 
+     alert ("Password must be between 8 - 128 characters");
+    var passwordLength = prompt ("How many characters are desired? (8-128)");
+ } console.log(passwordLength);
+  
   var passwordLower = confirm ("Do you want to include lowercase letters?");
   if (getRandomLower === false) {
     lower = lower.toUpperCase();
@@ -35,7 +36,7 @@ var passwordSymbol = confirm ("Do you want to include symbols?");
   if (getRandomSymbol === false) 
 
 // Write password to the #password input
-function passwordLength() {random}
+function passwordLength() {}
   if ((passwordLength > 7) && (passwordLength < 129))   
 
 
@@ -48,18 +49,26 @@ function passwordLength() {random}
   }console.log(getRandomUpper());
 
   function getRandomNumber() {
-    return numbers [Math.floor(Math.random() * numbers.length)];
+    return number [Math.floor(Math.random() * number.length)];
   }console.log(getRandomNumber());
 
   function getRandomSymbol() {
-    return symbols [Math.floor(Math.random() * symbols.length)];
+    return symbol [Math.floor(Math.random() * symbol.length)];
   }console.log(getRandomSymbol());
 
-  var funcrandom = (getRandomUpper, getRandomLower, getRandomSymbol, getRandomNumber)
+  // Loop if answer is outside the parameters 
+  while(getRandomLower === false && getRandomUpper === false && getRandomNumber === false && getRandomSymbol === false) 
+    alert("You must choose at least one parameter");
+
+
+  var funcrandom = (getRandomUpper, getRandomLower, getRandomSymbol, getRandomNumber);
+
+  var random = ""
 
   for (var i = 0; i<0; i++) {
     passwordLength += random.charAt(Math.floor(Math.random() * random.length))
   }
+    
 
   function generatePassword() {
     return funcrandom
@@ -71,6 +80,7 @@ function passwordLength() {random}
 function writePassword() {
   var password = generatePassword();
 }
+  
 
 
   
