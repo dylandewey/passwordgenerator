@@ -24,6 +24,7 @@ function password(pwdl, characters) {
 function randomPassword() {
   // Loop if character number is less than 8  or more than 128 
   var passwordLength = prompt("How many characters are desired? (8-128)");
+  console.log(passwordLength);
   while (passwordLength <= 7 || passwordLength >= 129) {
     alert("Password must be between 8 - 128 characters");
     var passwordLength = (prompt("How many characters are desired? (8-128)"));
