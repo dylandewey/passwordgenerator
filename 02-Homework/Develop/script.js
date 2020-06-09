@@ -4,108 +4,92 @@ var lower = "abcdefghijklmnopqrstuvwxyz"
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var number = "0123456789"
 var symbol = "!@#$%^&*(){}[]=<>/,."
+var forSure = ""
+var generate = ""
 
-
-function password(l, characters) {
+function password(pwdl, characters) {
   var pwd = "";
-  for (var i = 0; i < l; i++) {
+  for (var i = 0; i < pwdl; i++) {
+    // console.log(i, characters.charAt(i));
     pwd += characters.charAt(Math.floor(Math.random() * characters.length));
+  }console.log(pwd)
+  for (var g = 0; g < forSure.length; g++) {
+    // pwd.charAt(g) = forSure.charAt(g)
+    // pwd = pwd.replace()
+    console.log(pwd.charAt(g))
   }
   return pwd;
 }
-
+//password(passwordLength, generate)
 function randomPassword() {
-  var generate = ""
-
-
-  // Loop if answer is outside the parameters 
+  // Loop if character number is less than 8  or more than 128 
   var passwordLength = prompt("How many characters are desired? (8-128)");
-
   while (passwordLength <= 7 || passwordLength >= 129) {
-
     alert("Password must be between 8 - 128 characters");
     var passwordLength = (prompt("How many characters are desired? (8-128)"));
-  }console.log (passwordLength);
-  
-  
+   console.log(passwordLength);
+  }
+
   var passwordLower = confirm("Do you want to include lowercase letters?");
   if (passwordLower) {
     generate += lower
-  }console.log (passwordLower);
+    forSure += lower.charAt(Math.floor(Math.random() * lower.length))
+  } console.log(passwordLower);
 
   var passwordUpper = confirm("Do you want to include uppercase letters?");
   if (passwordUpper) {
     generate += upper
-  }console.log (passwordUpper);
+    forSure += upper.charAt(Math.floor(Math.random() * upper.length))
+  } console.log(passwordUpper);
 
   var passwordNumber = confirm("Do you want to include numbers?");
   if (passwordNumber) {
     generate += number
-  }console.log (passwordNumber);
+    forSure += number.charAt(Math.floor(Math.random() * number.length))
+  } console.log(passwordNumber);
 
   var passwordSymbol = confirm("Do you want to include symbols?");
   if (passwordSymbol) {
     generate += symbol
-  }console.log (passwordSymbol);
+    forSure += symbol.charAt(Math.floor(Math.random() * symbol.length))
+  } console.log(passwordSymbol);
+    console.log(forSure);
 
-  // Loop if answer is outside the parameters 
-  while(passwordLower === false && passwordUpper === false && passwordNumber === false && passwordSymbol === false) {
-    alert("You must choose at least one set of characters"); 
+  // Loop if all confirms are false 
+  while (passwordLower === false && passwordUpper === false && passwordNumber === false && passwordSymbol === false) {
+    alert("You must choose at least one set of characters");
     var passwordLower = confirm("Do you want to include lowercase letters?");
   if (passwordLower) {
-    gen += lower
-  }console.log (passwordLower);
+    generate += lower
+    forSure += lower.charAt(Math.floor(Math.random() * lower.length))
+  } console.log(passwordLower);
+
+  //change string to array and use this
+    //generate = generate.concat(lower);
 
   var passwordUpper = confirm("Do you want to include uppercase letters?");
   if (passwordUpper) {
-    gen += upper
-  }console.log (passwordUpper);
+    generate += upper
+    forSure += upper.charAt(Math.floor(Math.random() * upper.length))
+  } console.log(passwordUpper);
 
   var passwordNumber = confirm("Do you want to include numbers?");
   if (passwordNumber) {
-    gen += number
-  }console.log (passwordNumber);
+    generate += number
+    forSure += number.charAt(Math.floor(Math.random() * number.length))
+  } console.log(passwordNumber);
 
   var passwordSymbol = confirm("Do you want to include symbols?");
   if (passwordSymbol) {
-    gen += symbol
-  }console.log (passwordSymbol);
+    generate += symbol
+    forSure += symbol.charAt(Math.floor(Math.random() * symbol.length))
+    console.log(forSure);
+  } console.log(passwordSymbol);
+  
   }
 
   document.getElementById("password").value = password(passwordLength, generate);
 }
-
-
-// Write password to the #password input
-// function passwordLength() {
-//   if ((passwordLength > 7) && (passwordLength < 129))   
-
-//   function passwordLower() {
-//     return lower [Math.floor(Math.random() * lower.length)];
-//   }console.log(passwordLower());
-
-//   function passwordUpper() {
-//     return upper [Math.floor(Math.random() * upper.length)];
-//   }console.log(passwordUpper());
-
-//   function passwordNumber() {
-//     return number [Math.floor(Math.random() * number.length)];
-
-//   }console.log(passwordNumber());
-
-//   function passwordSymbol() {
-//     return symbol [Math.floor(Math.random() * symbol.length)];
-//   }console.log(passwordSymbol());
-
-//}
-
-
-
-
-
-//var random = ""
-
-//var passwordText = document.querySelector("#password");
 
 var generateBtn = document.querySelector("#generate");
 
