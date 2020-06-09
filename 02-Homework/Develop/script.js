@@ -3,7 +3,7 @@
 var lower = "abcdefghijklmnopqrstuvwxyz"
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var number = "0123456789"
-var symbol = "!@#$%^&*(){}[]=<>/,."
+var symbol = "!@#$%^&*(){}[]=<>/"
 var forSure = ""
 var generate = ""
 
@@ -53,9 +53,9 @@ function randomPassword() {
   if (passwordSymbol) {
     generate += symbol
     forSure += symbol.charAt(Math.floor(Math.random() * symbol.length))
-  } console.log(passwordSymbol);
+    console.log(passwordSymbol);
     console.log(forSure);
-
+  }
   // Loop if all confirms are false 
   while (passwordLower === false && passwordUpper === false && passwordNumber === false && passwordSymbol === false) {
     alert("You must choose at least one set of characters");
