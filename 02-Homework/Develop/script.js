@@ -7,12 +7,14 @@ var symbol = "!@#$%^&*(){}[]=<>/"
 var forSure = ""
 var generate = ""
 
+// For loop to randomly select the amount of characters input by user
 function password(pwdl, characters) {
   var pwd = "";
   for (var i = 0; i < pwdl; i++) {
-    // console.log(i, characters.charAt(i));
     pwd += characters.charAt(Math.floor(Math.random() * characters.length));
   }console.log(pwd)
+
+// For loop to make sure the variables selected by user are included in the password
   for (var g = 0; g < forSure.length; g++) {
     // pwd.charAt(g) = forSure.charAt(g)
     // pwd = pwd.replace()
@@ -20,17 +22,23 @@ function password(pwdl, characters) {
   }
   return pwd;
 }
+
 //password(passwordLength, generate)
+// Prompt for number of characters in password
+//Where the magic happens
 function randomPassword() {
-  // Loop if character number is less than 8  or more than 128 
   var passwordLength = prompt("How many characters are desired? (8-128)");
   console.log(passwordLength);
+
+// While loop if character number is less than 8  or more than 128 
   while (passwordLength <= 7 || passwordLength >= 129) {
     alert("Password must be between 8 - 128 characters");
+    // randomPassword();
     var passwordLength = (prompt("How many characters are desired? (8-128)"));
    console.log(passwordLength);
   }
 
+// User selects which type of characters to include in the password 
   var passwordLower = confirm("Do you want to include lowercase letters?");
   if (passwordLower) {
     generate += lower
@@ -56,9 +64,11 @@ function randomPassword() {
     console.log(passwordSymbol);
     console.log(forSure);
   }
-  // Loop if all confirms are false 
+  // While Loop if all selections are "false" 
   while (passwordLower === false && passwordUpper === false && passwordNumber === false && passwordSymbol === false) {
     alert("You must choose at least one set of characters");
+
+
     var passwordLower = confirm("Do you want to include lowercase letters?");
   if (passwordLower) {
     generate += lower
@@ -88,12 +98,10 @@ function randomPassword() {
   } console.log(passwordSymbol);
   
   }
-
   document.getElementById("password").value = password(passwordLength, generate);
 }
 
 var generateBtn = document.querySelector("#generate");
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", randomPassword);
