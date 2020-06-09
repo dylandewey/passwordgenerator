@@ -97,7 +97,6 @@ function randomPassword() {
   }
   document.getElementById("password").value = password(passwordLength, generate);
 }
-
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
