@@ -32,11 +32,8 @@ function randomPassword() {
   // While loop if character number is less than 8  or more than 128 
   while (passwordLength <= 7 || passwordLength >= 129) {
     alert("Password must be between 8 - 128 characters");
-    // randomPassword();
-    var passwordLength = (prompt("How many characters are desired? (8-128)"));
-    console.log(passwordLength);
+    return randomPassword();
   }
-
   // User selects which type of characters to include in the password 
   var passwordLower = confirm("Do you want to include lowercase letters?");
   if (passwordLower) {
@@ -63,37 +60,10 @@ function randomPassword() {
     console.log(passwordSymbol);
     console.log(forSure);
   }
-  // While Loop if all selections are "false" 
-  while (passwordLower === false && passwordUpper === false && passwordNumber === false && passwordSymbol === false) {
+  // if statement if all selections are "false" 
+  if (passwordLower === false && passwordUpper === false && passwordNumber === false && passwordSymbol === false) {
     alert("You must choose at least one set of characters");
-
-    //change string to array and use this
-    //generate = generate.concat(lower);
-    var passwordLower = confirm("Do you want to include lowercase letters?");
-    if (passwordLower) {
-      generate += lower
-      forSure += lower.charAt(Math.floor(Math.random() * lower.length))
-    } console.log(passwordLower);
-
-    var passwordUpper = confirm("Do you want to include uppercase letters?");
-    if (passwordUpper) {
-      generate += upper
-      forSure += upper.charAt(Math.floor(Math.random() * upper.length))
-    } console.log(passwordUpper);
-
-    var passwordNumber = confirm("Do you want to include numbers?");
-    if (passwordNumber) {
-      generate += number
-      forSure += number.charAt(Math.floor(Math.random() * number.length))
-    } console.log(passwordNumber);
-
-    var passwordSymbol = confirm("Do you want to include symbols?");
-    if (passwordSymbol) {
-      generate += symbol
-      forSure += symbol.charAt(Math.floor(Math.random() * symbol.length))
-      console.log(forSure);
-    } console.log(passwordSymbol);
-
+    return randomPassword ()
   }
   document.getElementById("password").value = password(passwordLength, generate);
 }
