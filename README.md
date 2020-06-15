@@ -9,4 +9,4 @@ I have one while loop in my code.  In my studying, collaboration, and research I
 ## Var forSure
 The intention of this variable is to make sure the password generated includes at least one character from each of the selections from the user.  This was a suggestion from my tutor and a good one.  I'm just not sure it works exactly like it is intended.  I have some of this code commented out because I'm not exactly sure how to do it at this point.  
 
-<img alt="passwordgenerator" src="./02-Homework/Develop/passwordgenerator.jpeg" width="500">
+<img alt="passwordgenerator" src="./Assets/passwordgenerator.jpeg" width="500">
